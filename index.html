@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>تواصل معنا – تصميم مواقع احترافية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f5ff;--card:rgba(255,255,255,.72);--text:#12142b;--muted:#5a6085;--line:rgba(80,70,229,.18);--a:#6366f1;--b:#a855f7;--c:#06b6d4;--blob:.35;--nav:rgba(244,245,255,.8);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070816;--card:rgba(255,255,255,.06);--text:#f1f2ff;--muted:#a7acd0;--line:rgba(255,255,255,.12);--blob:.55;--nav:rgba(7,8,22,.8)}}
+:root[data-theme="dark"]{--bg:#070816;--card:rgba(255,255,255,.06);--text:#f1f2ff;--muted:#a7acd0;--line:rgba(255,255,255,.12);--blob:.55;--nav:rgba(7,8,22,.8)}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Cairo",Tahoma,Arial,sans-serif;line-height:1.7;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--nav);z-index:60}
+.blobs{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.blobs i{position:absolute;width:380px;height:380px;border-radius:50%;filter:blur(80px);opacity:var(--blob);animation:float 14s ease-in-out infinite}
+.blobs i:nth-child(1){background:var(--a);top:-100px;right:-80px}
+.blobs i:nth-child(2){background:var(--b);bottom:-120px;left:-100px;animation-delay:-5s}
+.blobs i:nth-child(3){background:var(--c);top:45%;right:35%;width:260px;height:260px;animation-delay:-9s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-50px) scale(1.15)}}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);right:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b),var(--c));z-index:70}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--nav);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav div{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:6px;padding:8px 14px}
+.logo{font-weight:900;font-size:1.1rem;margin-inline-end:auto}
+nav a{color:var(--muted);text-decoration:none;font-weight:700;font-size:.88rem;padding:6px 9px;border-radius:9px;display:none}
+nav a:hover{color:var(--text);background:var(--card)}
+#th{border:1px solid var(--line);background:var(--card);color:var(--text);width:38px;height:38px;border-radius:11px;font-size:1.1rem;cursor:pointer}
+.ncall{display:inline-block!important;background:linear-gradient(135deg,var(--a),var(--b));color:#fff!important;padding:8px 14px!important}
+@media(min-width:700px){nav a{display:inline-block}}
+.wrap{max-width:900px;margin:0 auto;padding:10px 16px 90px}
+.hero{text-align:center;padding:42px 6px 10px}
+.badge{display:inline-block;padding:6px 16px;border:1px solid var(--line);background:var(--card);backdrop-filter:blur(10px);border-radius:99px;font-size:.85rem;color:var(--muted);animation:in .8s both}
+.badge b{display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-inline-end:6px;animation:pulse 1.6s infinite}
+h1{font-size:clamp(2rem,8vw,3.4rem);font-weight:900;line-height:1.25;margin:16px 0 8px;animation:in .8s .15s both}
+.grad{background:linear-gradient(90deg,var(--a),var(--b),var(--c),var(--a));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:300% 0}}
+.type{min-height:2em;font-weight:700;font-size:1.15rem;color:var(--muted);animation:in .8s .3s both}
+.type span{color:var(--text)}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--b);vertical-align:middle;margin-inline-start:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px;animation:in .8s .45s both}
+.btn{position:relative;display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:14px;font:inherit;font-weight:800;text-decoration:none;border:0;cursor:pointer;color:#fff;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px) scale(1.03)}.btn:active{transform:scale(.97)}
+.btn.call{background:linear-gradient(135deg,var(--a),var(--b));box-shadow:0 10px 30px -8px var(--a)}
+.btn.wa{background:#25d366;animation:ring 2.4s infinite}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%,100%{box-shadow:0 0 0 18px rgba(37,211,102,0)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.7)}70%,100%{box-shadow:0 0 0 8px rgba(34,197,94,0)}}
+@keyframes in{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.stats{display:flex;justify-content:center;gap:10px;margin:26px 0 4px;flex-wrap:wrap;animation:in .8s .6s both}
+.stat{background:var(--card);border:1px solid var(--line);backdrop-filter:blur(10px);border-radius:16px;padding:10px 18px;text-align:center;min-width:100px}
+.stat b{display:block;font-size:1.5rem;font-weight:900}.stat small{color:var(--muted)}
+h2{font-size:1.6rem;font-weight:900;margin:54px 0 2px;text-align:center}
+.sub{color:var(--muted);margin:0 0 18px;text-align:center}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}.rv.on{opacity:1;transform:none}
+.g{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);backdrop-filter:blur(12px);border:1.5px solid var(--line);border-radius:18px;padding:18px 12px;text-align:center;transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--b);box-shadow:0 18px 36px -16px var(--b)}
+.card .ic{font-size:2.1rem;display:block;transition:transform .3s}.card:hover .ic{transform:scale(1.25) rotate(-8deg)}
+.card b{display:block;font-weight:800}.card small{color:var(--muted);font-size:.8rem;display:block}
+.svc{text-align:right}.svc .ic{display:inline-block}
+.steps{display:grid;gap:12px;grid-template-columns:1fr}
+.step{display:flex;gap:14px;align-items:center;text-align:right}
+.step .n{flex:none;width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--a),var(--b));color:#fff;font-weight:900;font-size:1.3rem;display:grid;place-items:center}
+.pk{position:relative;padding:22px 16px;text-align:right;cursor:pointer;font:inherit;color:var(--text)}
+.pk h3{margin:0;font-size:1.25rem;font-weight:900}
+.pk .pr{font-size:1.7rem;font-weight:900;margin:6px 0}.pk .pr small{display:inline;font-size:.8rem}
+.pk ul{list-style:none;padding:0;margin:10px 0 0}.pk li{padding:3px 0;color:var(--muted);font-size:.9rem}.pk li::before{content:"✓ ";color:#22c55e;font-weight:900}
+.pk.hot{border-color:var(--b);box-shadow:0 20px 44px -20px var(--b)}
+.tag{position:absolute;top:-12px;left:14px;background:linear-gradient(135deg,var(--b),var(--c));color:#fff;font-size:.75rem;font-weight:800;padding:3px 12px;border-radius:99px}
+.pk[aria-pressed="true"]{border-color:var(--a);background:linear-gradient(160deg,color-mix(in srgb,var(--a) 22%,transparent),color-mix(in srgb,var(--b) 14%,transparent))}
+.opt{cursor:pointer;font:inherit;color:var(--text);position:relative;overflow:hidden}
+.opt::before{content:"✓";position:absolute;top:8px;left:8px;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--b));color:#fff;display:grid;place-items:center;font-weight:900;transform:scale(0);transition:transform .3s cubic-bezier(.3,1.8,.6,1)}
+.opt[aria-pressed="true"]{border-color:var(--a);background:linear-gradient(160deg,color-mix(in srgb,var(--a) 22%,transparent),color-mix(in srgb,var(--b) 16%,transparent))}
+.opt[aria-pressed="true"]::before{transform:scale(1)}
+.pop{animation:pop .4s}@keyframes pop{40%{transform:scale(.93)}70%{transform:scale(1.05)}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chip{padding:8px 14px;border-radius:99px;border:1.5px solid var(--line);background:transparent;color:var(--text);font:inherit;font-weight:600;font-size:.88rem;cursor:pointer;transition:.2s}
+.chip:hover{border-color:var(--b)}
+.chip[aria-pressed="true"]{background:linear-gradient(135deg,var(--a),var(--b));color:#fff;border-color:transparent}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin-bottom:10px;backdrop-filter:blur(10px)}
+summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";font-size:1.3rem;color:var(--b);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:8px 0 2px;color:var(--muted)}
+.box{background:var(--card);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:22px;padding:20px;max-width:640px;margin:0 auto}
+label{display:block;font-weight:700;margin:14px 0 5px;font-size:.93rem}
+input,select,textarea{width:100%;padding:13px 14px;border-radius:12px;border:1.5px solid var(--line);background:transparent;color:var(--text);font:inherit;transition:border-color .2s,box-shadow .2s}
+select option{color:#111}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--b);box-shadow:0 0 0 4px color-mix(in srgb,var(--b) 22%,transparent)}
+textarea{min-height:90px;resize:vertical}
+.sum{margin-top:14px;padding:10px 14px;border-radius:12px;background:color-mix(in srgb,var(--a) 12%,transparent);font-size:.9rem;color:var(--muted)}
+.send{width:100%;justify-content:center;margin-top:16px;background:linear-gradient(135deg,#22c55e,#06b6d4);font-size:1.1rem;overflow:hidden}
+.send::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:sweep 3s infinite}
+@keyframes sweep{to{left:130%}}
+.err{color:#ef4444;font-size:.9rem;text-align:center;min-height:1.3em;margin-top:8px}.err.shake{animation:shake .4s}
+@keyframes shake{25%{transform:translateX(8px)}75%{transform:translateX(-8px)}}
+.note{text-align:center;color:var(--muted);font-size:.88rem;margin-top:12px}.note a{color:var(--b);font-weight:800;text-decoration:none}
+footer{text-align:center;color:var(--muted);margin-top:44px;font-size:.85rem}
+.fab{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;font-size:1.7rem;display:grid;place-items:center;text-decoration:none;z-index:55;animation:ring 2.4s infinite,bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@media(min-width:620px){.g.c3{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+#cv{position:fixed;inset:0;z-index:-1;pointer-events:none}
+#cf{position:fixed;inset:0;pointer-events:none;z-index:90}
+#gl{position:fixed;left:0;top:0;width:360px;height:360px;margin:-180px 0 0 -180px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--b) 32%,transparent),transparent 65%);pointer-events:none;z-index:0;opacity:0;transition:opacity .4s}
+.blobs{inset:-40px;transition:transform .5s ease-out}
+#sp{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;animation:hide .6s 1.5s forwards}
+#sp span{font-size:4.5rem;animation:zoom 1.1s both}
+@keyframes zoom{0%{transform:scale(.2) rotate(-180deg);opacity:0}60%{transform:scale(1.3) rotate(12deg);opacity:1}100%{transform:none}}
+@keyframes hide{to{opacity:0;visibility:hidden}}
+.mq{overflow:hidden;margin:30px -16px 0;border-block:1px solid var(--line);background:var(--card);backdrop-filter:blur(10px);padding:11px 0;direction:ltr;transform:rotate(-1.5deg)}
+.mq div{display:flex;width:max-content;animation:mq 26s linear infinite;font-weight:800;color:var(--muted)}
+.mq span{white-space:nowrap}
+.mq span::after{content:'✦';margin:0 30px;color:var(--b)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.hero{position:relative}
+.fl{position:absolute;font-size:1.8rem;opacity:.6;pointer-events:none;animation:fl 6s ease-in-out infinite;animation-delay:var(--d);filter:drop-shadow(0 8px 10px rgba(0,0,0,.25))}
+@keyframes fl{50%{transform:translateY(-24px) rotate(14deg)}}
+.st{opacity:0}
+.st.on{animation:pu .8s cubic-bezier(.2,.9,.3,1.2) both;animation-delay:var(--i)}
+@keyframes pu{from{opacity:0;transform:translateY(46px) scale(.8) rotate(var(--r))}to{opacity:1;transform:none}}
+h2{position:relative}
+h2::after{content:'';display:block;height:4px;width:0;margin:8px auto 0;border-radius:4px;background:linear-gradient(90deg,var(--a),var(--b),var(--c));transition:width .9s .3s}
+h2.on::after{width:90px}
+.pk.hot{animation:glow 2.6s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 54px -6px var(--b),0 0 0 2px var(--c)}}
+.step .n{animation:np 2.6s ease-in-out infinite}
+@keyframes np{50%{transform:scale(1.12) rotate(7deg)}}
+.rp{position:absolute;border-radius:50%;background:rgba(255,255,255,.55);transform:scale(0);animation:rp .65s linear;pointer-events:none}
+@keyframes rp{to{transform:scale(4);opacity:0}}
+.btn{overflow:hidden}
+.logo{animation:in .8s both}
+@media(prefers-reduced-motion:reduce){#sp{display:none}.st{opacity:1}}
+.bw{max-width:440px;margin:30px auto 0;background:var(--card);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px var(--a);animation:in .8s .7s both,fl2 6s 1.6s ease-in-out infinite}
+@keyframes fl2{50%{transform:translateY(-10px)}}
+.bt{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.bt i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.bt span{margin-inline-start:auto;font-size:.75rem;color:var(--muted);direction:ltr}
+.bb{padding:16px;display:flex;flex-direction:column;gap:12px}
+.bk{height:14px;border-radius:8px;background:var(--line);opacity:0;animation:bk 8s var(--k) infinite}
+.bk.hb{height:90px;background:linear-gradient(135deg,var(--a),var(--b))}
+.rw{display:flex;gap:10px}.rw .bk{flex:1;height:58px}
+.bk.bn{height:34px;width:40%;background:#22c55e;margin-inline-end:auto}
+@keyframes bk{0%{opacity:0;transform:translateY(16px) scale(.9)}8%,80%{opacity:1;transform:none}92%,100%{opacity:0}}
+.chat{max-width:520px;height:340px;margin:0 auto;overflow:hidden;background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:22px;padding:14px 16px;display:flex;flex-direction:column;justify-content:flex-end}
+.m{max-width:82%;padding:10px 14px;border-radius:16px;margin:6px 0;font-size:.95rem;animation:in .4s both}
+.m.u{background:linear-gradient(135deg,var(--a),var(--b));color:#fff;margin-inline-start:auto}
+.m.a{background:var(--card);border:1px solid var(--line);margin-inline-end:auto}
+.dots i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--muted);margin:0 2px;animation:dt 1s infinite}
+.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
+@keyframes dt{50%{transform:translateY(-6px)}}
+.clr{width:46px;height:46px;border-radius:50%;border:3px solid transparent;cursor:pointer;transition:transform .25s,border-color .25s;box-shadow:0 8px 18px -8px rgba(0,0,0,.5)}
+.clr:hover{transform:scale(1.2) rotate(8deg)}
+.clr[aria-pressed='true']{border-color:var(--text);transform:scale(1.25)}
+.sty{padding:8px 16px;border-radius:99px;border:1.5px solid var(--line);background:transparent;color:var(--text);font:inherit;font-weight:700;font-size:.9rem;cursor:pointer;transition:.2s}
+.sty:hover{border-color:var(--b)}
+.sty[aria-pressed='true']{background:linear-gradient(135deg,var(--a),var(--b));color:#fff;border-color:transparent}
+input[type=range]{padding:0;border:0;accent-color:var(--b)}
+.ev{text-align:center;margin-top:10px}
+.ev b{font-size:2.8rem;font-weight:900;margin:0 8px;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.chat{overflow-y:auto;justify-content:flex-start}
+.chat>:first-child{margin-top:auto}
+.cin{max-width:520px;margin:12px auto 0;display:flex;gap:8px}
+.cin input{flex:1}
+.qb{padding:8px 14px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);color:var(--text);font:inherit;font-weight:700;font-size:.85rem;cursor:pointer;transition:.2s}
+.qb:hover{border-color:var(--b);transform:translateY(-2px)}
+</style>
+</head>
+<body>
+<div class="blobs"><i></i><i></i><i></i></div><canvas id="cv"></canvas><div id="gl"></div><canvas id="cf"></canvas><div id="sp"><span>🚀</span></div><div id="bar"></div>
+<nav><div><span class="logo">🚀 ويب ستوديو</span><a href="#svc">الخدمات</a><a href="#pk">الباقات</a><a href="#faq">أسئلة</a><a class="ncall" href="#go">اطلب الآن</a><button id="th" aria-label="الوضع">🌓</button></div></nav>
+<div class="wrap">
+<section class="hero">
+<span class="badge"><b></b>متاحين الآن لاستقبال مشاريع جديدة</span>
+<h1>نحوّل فكرتك إلى <span class="grad">موقع بيبهر عملاءك</span></h1>
+<div class="type">نصمم <span id="tw"></span><i class="caret"></i></div>
+<div class="btns"><a class="btn call" href="tel:+201091453466">📞 01091453466</a><a class="btn wa" href="https://wa.me/201091453466" target="_blank" rel="noopener">💬 كلمنا واتساب</a></div>
+<div class="stats"><div class="stat"><b data-n="50">0</b><small>+ مشروع</small></div><div class="stat"><b data-n="100">0</b><small>٪ رضا العملاء</small></div><div class="stat"><b data-n="24">0</b><small>ساعة للرد</small></div></div>
+<div class="bw" aria-hidden="true"><div class="bt"><i></i><i></i><i></i><span>yoursite.com</span></div><div class="bb"><div class="bk" style="--k:0s;width:55%"></div><div class="bk hb" style="--k:.5s"></div><div class="rw"><div class="bk" style="--k:1s"></div><div class="bk" style="--k:1.3s"></div><div class="bk" style="--k:1.6s"></div></div><div class="bk bn" style="--k:2.1s"></div></div></div>
+</section>
+<div class="mq" id="mq"></div>
+
+<h2 class="rv" id="svc">ليه تختارنا؟ ✨</h2><p class="sub rv">كل اللي موقعك محتاجه في مكان واحد</p>
+<div class="g c3 rv" id="svcs"></div>
+
+<h2 class="rv">إزاي بنشتغل؟ 🛠️</h2><p class="sub rv">٤ خطوات بسيطة من الفكرة للإطلاق</p>
+<div class="steps rv" id="steps"></div>
+
+<h2 class="rv" id="pk">الباقات 💎</h2><p class="sub rv">اضغط على الباقة اللي تناسبك (الأسعار تقريبية وتختلف حسب المشروع)</p>
+<div class="g c3 rv" id="pks"></div>
+
+<h2 class="rv" id="go">عايز موقع إيه؟ 👇</h2><p class="sub rv">تقدر تختار أكتر من نوع</p>
+<div class="g c3 rv" id="opts"></div>
+
+<h2 class="rv">إضافات تحبها؟ ➕</h2>
+<div class="chips rv" id="chips" style="justify-content:center"></div>
+<h2 class="rv">جرّب لون وستايل موقعك 🎨</h2><p class="sub rv">اختار وشوف التغيير على الصفحة فورًا</p>
+<div class="chips rv" id="sw" style="justify-content:center"></div><div class="chips rv" id="sty" style="justify-content:center;margin-top:14px"></div>
+<h2 class="rv">احسب تكلفة تقريبية 🧮</h2>
+<div class="box rv est"><label for="pgs" style="text-align:center">عدد الصفحات: <b id="pgn">3</b></label><input type="range" id="pgs" min="1" max="20" value="3"><div class="ev"><small>التقدير المبدئي</small><b id="ev">2,500</b><small>جنيه</small></div><div class="note">تقدير تقريبي حسب اختياراتك، والسعر النهائي بعد الاتفاق</div></div>
+
+<h2 class="rv">بياناتك ✍️</h2>
+<div class="box rv">
+<label for="name">الاسم</label><input id="name" placeholder="اسمك">
+<label for="budget">الميزانية التقريبية</label>
+<select id="budget"><option value="">غير محددة</option><option>أقل من 3000 جنيه</option><option>3000 – 8000 جنيه</option><option>8000 – 20000 جنيه</option><option>أكتر من 20000 جنيه</option></select>
+<label for="time">محتاجه خلال</label>
+<select id="time"><option value="">مفيش معاد محدد</option><option>أسبوع</option><option>أسبوعين</option><option>شهر</option></select>
+<label for="msg">تفاصيل إضافية</label><textarea id="msg" placeholder="اكتب أي تفاصيل أو أفكار عندك..."></textarea>
+<div class="sum" id="sum">اختياراتك هتظهر هنا ✨</div>
+<div class="err" id="err"></div>
+<a class="btn send" id="send" href="https://wa.me/201091453466" target="_blank" rel="noopener">🚀 ابعت الطلب على واتساب</a>
+<div class="note" id="fb" style="display:none">لو واتساب ماتفتحش تلقائي: <a id="fbl" href="#" target="_blank" rel="noopener">اضغط هنا</a></div>
+<div class="note">أو كلمنا مباشرة على <a href="tel:+201091453466">01091453466</a></div>
+</div>
+
+<h2 class="rv" id="ai">دعم بالذكاء الاصطناعي 🤖</h2><p class="sub rv">اسأل المساعد الذكي أي سؤال وهيرد عليك دلوقتي</p>
+<div class="chat rv" id="chat"></div>
+<div class="chips rv" style="justify-content:center;margin-top:12px"><button class="qb">بتعملوا إيه؟</button><button class="qb">الموقع بياخد وقت قد إيه؟</button><button class="qb">عايز متجر إلكتروني</button><button class="qb">إزاي أعدل في موقعي؟</button></div>
+<div class="cin rv"><input id="ci" placeholder="اكتب سؤالك للمساعد..." autocomplete="off"><button class="btn call" id="cs">إرسال</button></div>
+<div class="note">المساعد ذكاء اصطناعي وممكن يغلط. للأسعار والتفاصيل كلمنا على <a href="https://wa.me/201091453466" target="_blank" rel="noopener">واتساب</a></div>
+<h2 class="rv" id="faq">أسئلة شائعة 🤔</h2>
+<div class="rv" id="faqs" style="max-width:640px;margin:0 auto"></div>
+<footer>© جميع الحقوق محفوظة · 01091453466</footer>
+</div>
+<a class="fab" href="https://wa.me/201091453466" target="_blank" rel="noopener" aria-label="واتساب">💬</a>
+<script>
+var $=function(i){return document.getElementById(i)};
+var S=[['🎨','تصميم عصري','واجهات جذابة بتشد العميل من أول نظرة'],['📱','متجاوب مع كل الشاشات','موبايل وتابلت وكمبيوتر بنفس الجودة'],['⚡','سرعة عالية','تحميل سريع يحسّن تجربة الزوار'],['🔍','جاهز لجوجل SEO','عشان موقعك يظهر في نتائج البحث'],['🧩','لوحة تحكم سهلة','تعدّل المحتوى بنفسك من غير برمجة'],['🤖','دعم بالذكاء الاصطناعي','مساعد ذكي بيرد عليك 24 ساعة لأي سؤال أو مشكلة']];
+$('svcs').innerHTML=S.map(function(s){return '<div class="card svc"><span class="ic">'+s[0]+'</span><b>'+s[1]+'</b><small>'+s[2]+'</small></div>'}).join('');
+var T=[['نسمع فكرتك','نفهم نشاطك وهدفك وجمهورك'],['نصمم نموذج','تشوف التصميم وتعدّل قبل التنفيذ'],['نبرمج وننفذ','نحوّل التصميم لموقع شغال'],['تسليم ودعم','نطلقه ونفضل معاك بعد التسليم']];
+$('steps').innerHTML=T.map(function(s,i){return '<div class="card step"><div class="n">'+(i+1)+'</div><div><b>'+s[0]+'</b><small>'+s[1]+'</small></div></div>'}).join('');
+var P=[['🌱','أساسية','2,500',['حتى 3 صفحات','متجاوب مع الموبايل','زرار واتساب واتصال','تسليم خلال أسبوع']],['🔥','احترافية','6,000',['حتى 8 صفحات','تصميم مخصص بالكامل','جاهز لـ SEO','لوحة تحكم + دومين']],['💎','متكاملة','12,000',['متجر أو منصة كاملة','دفع إلكتروني','تحليلات وتقارير','دعم بالذكاء الاصطناعي لمدة شهر']]];
+$('pks').innerHTML=P.map(function(p,i){return '<button class="card pk'+(i==1?' hot':'')+'" aria-pressed="false" data-v="باقة '+p[1]+'">'+(i==1?'<span class="tag">الأكثر طلبًا</span>':'')+'<h3>'+p[0]+' '+p[1]+'</h3><div class="pr"><small>تبدأ من</small> '+p[2]+' <small>جنيه</small></div><ul>'+p[3].map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></button>'}).join('');
+var O=[['🏢','موقع شركة','تعريفي احترافي'],['🛒','متجر إلكتروني','بيع أونلاين'],['🎨','معرض أعمال','Portfolio'],['🍔','مطعم / كافيه','منيو وطلبات'],['🩺','عيادة / حجوزات','مواعيد أونلاين'],['🏠','عقارات','عرض وحدات'],['🎓','منصة تعليمية','كورسات'],['📰','مدونة','مقالات وأخبار'],['⚡','صفحة هبوط','لإعلان أو منتج']];
+$('opts').innerHTML=O.map(function(o){return '<button class="card opt" aria-pressed="false" data-v="'+o[1]+'"><span class="ic">'+o[0]+'</span><b>'+o[1]+'</b><small>'+o[2]+'</small></button>'}).join('');
+var C=['دومين واستضافة','لوحة تحكم','عربي + إنجليزي','SEO','دفع إلكتروني','تصميم لوجو','شات واتساب','تحليلات الزوار','سكشن عملاء','ربط سوشيال ميديا','دعم بالذكاء الاصطناعي'];
+$('chips').innerHTML=C.map(function(c){return '<button class="chip" aria-pressed="false" data-v="'+c+'">'+c+'</button>'}).join('');
+var Q=[['بياخد وقت قد إيه؟','الصفحة الواحدة بتاخد أيام قليلة، والمواقع الكاملة من أسبوعين لشهر حسب التفاصيل.'],['بيتكلف كام؟','السعر بيختلف حسب نوع الموقع والمميزات. ابعت طلبك ونرد عليك بعرض واضح.'],['الموقع هيشتغل على الموبايل؟','أكيد، كل مواقعنا متجاوبة مع كل الشاشات.'],['في دعم بعد التسليم؟','أيوه، عندك دعم بالذكاء الاصطناعي متاح في أي وقت لأي سؤال أو مشكلة بعد الإطلاق.'],['أقدر أعدل المحتوى بنفسي؟','ممكن نضيف لك لوحة تحكم بسيطة تعدّل منها النصوص والصور.']];
+$('faqs').innerHTML=Q.map(function(q){return '<details><summary>'+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join('');
+var W=['مواقع شركات','متاجر إلكترونية','صفحات هبوط','منصات تعليمية','أي فكرة في دماغك'],wi=0,ci=0,dl=false;
+(function t(){var w=W[wi];ci+=dl?-1:1;$('tw').textContent=w.slice(0,ci);var d=dl?45:95;if(!dl&&ci===w.length){dl=true;d=1400}else if(dl&&ci===0){dl=false;wi=(wi+1)%W.length;d=300}setTimeout(t,d)})();
+document.querySelectorAll('[data-n]').forEach(function(e){setTimeout(function(){var n=+e.dataset.n,s=0,st=Math.max(1,Math.ceil(n/40)),i=setInterval(function(){s+=st;if(s>=n){s=n;clearInterval(i)}e.textContent=s},35)},700)});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+addEventListener('scroll',function(){var h=document.documentElement;$('bar').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+$('th').onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark'};
+function sel(s){var a=[];document.querySelectorAll(s+'[aria-pressed="true"]').forEach(function(e){a.push(e.dataset.v)});return a}
+function upd(){var p=sel('.pk'),o=sel('.opt'),c=sel('.chip'),a=[].concat(p,o,c);$('sum').textContent=a.length?'اخترت: '+a.join(' · '):'اختياراتك هتظهر هنا ✨';$('err').textContent=''}
+document.querySelectorAll('.pk,.opt,.chip').forEach(function(b){b.addEventListener('click',function(){
+ var on=b.getAttribute('aria-pressed')==='true';
+ if(b.classList.contains('pk'))document.querySelectorAll('.pk').forEach(function(x){x.setAttribute('aria-pressed','false')});
+ b.setAttribute('aria-pressed',on?'false':'true');b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop');upd()})});
+function build(){
+ var o=sel('.opt'),p=sel('.pk'),c=sel('.chip'),e=$('err');
+ if(!o.length&&!p.length){e.textContent='من فضلك اختار نوع الموقع أو الباقة الأول 👆';e.classList.remove('shake');void e.offsetWidth;e.classList.add('shake');$('go').scrollIntoView({behavior:'smooth'});return}
+ var n=$('name').value.trim(),b=$('budget').value,t=$('time').value,m=$('msg').value.trim();
+ var x='السلام عليكم 👋\nأنا '+(n||'عميل جديد')+' وعايز أعمل موقع إلكتروني.\n'+(o.length?'\nنوع الموقع: '+o.join('، '):'')+(p.length?'\nالباقة: '+p[0]:'')+(c.length?'\nإضافات: '+c.join('، '):'')+(b?'\nالميزانية: '+b:'')+(t?'\nالمدة المطلوبة: '+t:'')+(m?'\nتفاصيل: '+m:'');
+ return 'https://wa.me/201091453466?text='+encodeURIComponent(x)}
+$('send').addEventListener('click',function(ev){var u=build();if(!u){ev.preventDefault();return}this.href=u;$('fb').style.display='block';$('fbl').href=u});
+(function(){
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,hv=matchMedia('(hover:hover)').matches;
+var mw=['مواقع شركات','متاجر إلكترونية','صفحات هبوط','تصميم UI/UX','سرعة عالية','متجاوب مع الموبايل','SEO','دعم بالذكاء الاصطناعي','لوحة تحكم','دفع إلكتروني'];
+var mh=mw.map(function(w){return '<span>'+w+'</span>'}).join('');$('mq').innerHTML='<div>'+mh+mh+'</div>';
+var fe=['💻','🛒','📱','⚡','🎨','🚀'],fp=[[6,'right',3],[10,'left',4],[42,'right',1],[48,'left',1],[78,'right',5],[80,'left',6]],hero=document.querySelector('.hero');
+fe.forEach(function(e,i){var b=document.createElement('b');b.className='fl';b.textContent=e;b.style.cssText='top:'+fp[i][0]+'%;'+fp[i][1]+':'+fp[i][2]+'%;--d:'+(-i*1.1)+'s';hero.appendChild(b)});
+var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var k=e.target;k.classList.add('on');k.addEventListener('animationend',function(ev){if(ev.target===k&&ev.animationName==='pu')k.classList.remove('st','on')});io2.unobserve(k)}})},{threshold:.15});
+['svcs','steps','pks','opts','chips'].forEach(function(id){var c=$(id);c.classList.remove('rv');[].forEach.call(c.children,function(k,i){k.classList.add('st');k.style.setProperty('--i',(i*90)+'ms');k.style.setProperty('--r',(i%2?-5:5)+'deg');io2.observe(k)})});
+if(hv&&!rm){document.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transition='transform .08s';c.style.transform='perspective(700px) rotateY('+(x*14)+'deg) rotateX('+(-y*14)+'deg) translateY(-6px) scale(1.02)'});c.addEventListener('pointerleave',function(){c.style.transition='';c.style.transform=''})});
+var g=$('gl'),bl=document.querySelector('.blobs');addEventListener('pointermove',function(e){g.style.opacity=1;g.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';bl.style.transform='translate('+((e.clientX/innerWidth-.5)*-40)+'px,'+((e.clientY/innerHeight-.5)*-40)+'px)'})}
+if(!rm){var cv=$('cv'),cx=cv.getContext('2d'),W,H,N=[],mx=-999,my=-999;
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight;var n=Math.min(60,Math.floor(W*H/22000));N=[];for(var i=0;i<n;i++)N.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5})}
+rs();addEventListener('resize',rs);addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY});
+(function d(){cx.clearRect(0,0,W,H);for(var i=0;i<N.length;i++){var p=N[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;var dx=p.x-mx,dy=p.y-my;if(dx*dx+dy*dy<14000){p.x+=dx*.03;p.y+=dy*.03}cx.fillStyle='rgba(140,120,255,.75)';cx.beginPath();cx.arc(p.x,p.y,1.9,0,6.3);cx.fill();for(var j=i+1;j<N.length;j++){var q=N[j],ax=p.x-q.x,ay=p.y-q.y,ad=ax*ax+ay*ay;if(ad<17000){cx.strokeStyle='rgba(140,120,255,'+(.4*(1-ad/17000))+')';cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.stroke()}}}requestAnimationFrame(d)})()}
+document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(e){var r=b.getBoundingClientRect(),s=document.createElement('i'),z=Math.max(r.width,r.height);s.className='rp';s.style.cssText='width:'+z+'px;height:'+z+'px;left:'+(e.clientX-r.left-z/2)+'px;top:'+(e.clientY-r.top-z/2)+'px';b.appendChild(s);setTimeout(function(){s.remove()},650)})});
+var cf=$('cf'),cc=cf.getContext('2d');
+function boom(){if(rm)return;cf.width=innerWidth;cf.height=innerHeight;var cl=['#6366f1','#a855f7','#06b6d4','#22c55e','#facc15','#f97316'],P=[];for(var i=0;i<90;i++){var a=Math.random()*6.28,s=4+Math.random()*9;P.push({x:innerWidth/2,y:innerHeight*.65,vx:Math.cos(a)*s,vy:Math.sin(a)*s-6,c:cl[i%6],w:6+Math.random()*6,r:Math.random()*6,vr:(Math.random()-.5)*.4})}var t=0;(function f(){cc.clearRect(0,0,cf.width,cf.height);P.forEach(function(p){p.vy+=.28;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;cc.save();cc.translate(p.x,p.y);cc.rotate(p.r);cc.fillStyle=p.c;cc.fillRect(-p.w/2,-p.w/4,p.w,p.w/2);cc.restore()});if(++t<130)requestAnimationFrame(f);else cc.clearRect(0,0,cf.width,cf.height)})()}
+$('send').addEventListener('click',function(){if(sel('.opt').length||sel('.pk').length)boom()});
+var EST=2500,tw2;
+function est(){var pg=+$('pgs').value,o=sel('.opt'),v=2500+Math.max(0,pg-3)*600+sel('.chip').length*400;if(o.indexOf('متجر إلكتروني')>-1||o.indexOf('منصة تعليمية')>-1)v+=3000;$('pgn').textContent=pg;var f=EST,t0=performance.now();EST=v;cancelAnimationFrame(tw2);(function s(t){var k=Math.min(1,(t-t0)/600);$('ev').textContent=Math.round(f+(v-f)*(1-Math.pow(1-k,3))).toLocaleString('en-US');if(k<1)tw2=requestAnimationFrame(s)})(t0)}
+$('pgs').addEventListener('input',est);document.querySelectorAll('.pk,.opt,.chip').forEach(function(b){b.addEventListener('click',est)});
+var CL=[['#6366f1','بنفسجي'],['#06b6d4','سماوي'],['#22c55e','أخضر'],['#f97316','برتقالي'],['#ef4444','أحمر'],['#facc15','أصفر'],['#14b8a6','تيركواز'],['#ec4899','وردي']];
+$('sw').innerHTML=CL.map(function(c){return '<button class="clr" aria-pressed="false" aria-label="'+c[1]+'" data-v="'+c[1]+'" data-c="'+c[0]+'" style="background:'+c[0]+'"></button>'}).join('');
+document.querySelectorAll('.clr').forEach(function(b){b.addEventListener('click',function(){var on=b.getAttribute('aria-pressed')==='true',r=document.documentElement.style;document.querySelectorAll('.clr').forEach(function(x){x.setAttribute('aria-pressed','false')});if(on){r.removeProperty('--a');r.removeProperty('--b')}else{b.setAttribute('aria-pressed','true');r.setProperty('--a',b.dataset.c);r.setProperty('--b','color-mix(in srgb,'+b.dataset.c+' 60%,#a855f7)')}})});
+var SY=['داكن فخم','فاتح بسيط','ملوّن جريء'];
+$('sty').innerHTML=SY.map(function(s){return '<button class="sty" aria-pressed="false" data-v="'+s+'">'+s+'</button>'}).join('');
+document.querySelectorAll('.sty').forEach(function(b){b.addEventListener('click',function(){var on=b.getAttribute('aria-pressed')==='true';document.querySelectorAll('.sty').forEach(function(x){x.setAttribute('aria-pressed','false')});if(!on){b.setAttribute('aria-pressed','true');if(b.dataset.v==='داكن فخم')document.documentElement.dataset.theme='dark';if(b.dataset.v==='فاتح بسيط')document.documentElement.dataset.theme='light'}})});
+var _b=build;build=function(){var u=_b();if(!u)return u;var t=decodeURIComponent(u.split('?text=')[1]),x=[],s=sel('.sty'),k=sel('.clr');if(s.length)x.push('الستايل: '+s[0]);if(k.length)x.push('اللون: '+k[0]);x.push('تقدير مبدئي: '+EST.toLocaleString('en-US')+' جنيه');return 'https://wa.me/201091453466?text='+encodeURIComponent(t+'\n'+x.join('\n'))};
+var cm=[['u','عايز أغيّر رقم التليفون في الموقع'],['a','تمام! افتح لوحة التحكم، اختار الإعدادات، غيّر الرقم واضغط حفظ.'],['u','والموقع بطيء شوية عندي'],['a','هراجع حجم الصور وأقترح ضغطها، وده غالبًا بيخلي الموقع أسرع.'],['u','تحفة، شكرًا!'],['a','العفو! أنا موجود في أي وقت 🤖']];
+function play(){var c=$('chat');c.innerHTML='';var i=0;(function n(){if(i>=cm.length){setTimeout(play,4500);return}var m=cm[i++],t=document.createElement('div');if(m[0]==='a'){t.className='m a dots';t.innerHTML='<i></i><i></i><i></i>';c.appendChild(t);setTimeout(function(){t.className='m a';t.textContent=m[1];setTimeout(n,1400)},1100)}else{t.className='m u';t.textContent=m[1];c.appendChild(t);setTimeout(n,1300)}})()}
+new IntersectionObserver(function(es,o){if(es[0].isIntersecting){greet();o.disconnect()}},{threshold:.3}).observe($('chat'));
+var hist=[],busy=false,SYS='أنت مساعد دعم فني ذكي لشركة تصميم مواقع إلكترونية في مصر. رد بالعامية المصرية المهذبة وباختصار (جملتين أو ثلاثة). الخدمات: مواقع شركات، متاجر إلكترونية، صفحات هبوط، منصات تعليمية، مواقع مطاعم وعيادات وعقارات، بتصميم متجاوب مع الموبايل وجاهز لـ SEO ولوحة تحكم ودعم بالذكاء الاصطناعي. لا تذكر أسعارًا محددة ولا مدد تسليم مؤكدة ولا أي وعود؛ قل إن السعر والتفاصيل بيتحددوا بعد الاتفاق وانصح بالتواصل على واتساب أو الاتصال على 01091453466. لو السؤال خارج موضوع المواقع والدعم اعتذر بلطف ووجّه الكلام لخدماتنا.';
+function add(c,t){var d=document.createElement('div');d.className='m '+c;d.textContent=t;$('chat').appendChild(d);$('chat').scrollTop=1e5;return d}
+function greet(){$('chat').innerHTML='';add('a','أهلًا بيك! 👋 أنا المساعد الذكي. اسألني عن خدماتنا أو أي مشكلة في موقعك.')}
+async function ask(q){if(busy||!q)return;busy=true;add('u',q);hist.push({role:'user',content:q});var d=add('a dots','');d.innerHTML='<i></i><i></i><i></i>';
+try{var sp=window.claude?await claude.use('sample'):null;if(!sp)throw{code:'na'};var ms=hist.slice(-9).map(function(m,i){return i===0?{role:'user',content:SYS+'\n\nرسالة العميل: '+m.content}:m});var r=await sp(ms,{cache:false,modelTier:'quick',onText:function(o){d.className='m a';d.textContent=o.text;$('chat').scrollTop=1e5}});d.className='m a';d.textContent=r.text;hist.push({role:'assistant',content:r.text})}
+catch(e){hist.pop();d.className='m a';d.textContent=e&&e.code==='rate_limited'?'الشات مشغول شوية، جرّب كمان لحظات 🙏':'مش قادر أرد دلوقتي 😅 كلمنا مباشرة على واتساب أو اتصل على 01091453466'}
+busy=false}
+$('cs').addEventListener('click',function(){var v=$('ci').value.trim();$('ci').value='';ask(v)});
+$('ci').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();$('cs').click()}});
+document.querySelectorAll('.qb').forEach(function(b){b.addEventListener('click',function(){ask(b.textContent)})});
+})();
+</script>
+</body>
+</html>
